@@ -13,6 +13,6 @@ layout = "us,ru"
 options = "grp:alt_shift_toggle"
 [background]
 type = "wallpaper"
-path = "~/Pictures/01-wall3.jpg"
+path = "~/.config/driftwm/backgrounds/01-wall3.jpg"
 
 
