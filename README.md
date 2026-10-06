@@ -1,6 +1,6 @@
 my first dotfiles
 
-composer: driftwm
+* composer: driftwm
 
 * soft:
 * bar: waybar
