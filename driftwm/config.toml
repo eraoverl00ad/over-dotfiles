@@ -1,0 +1,18 @@
+autostart = ["xwayland-satellite", "waybar", "/usr/lib/xdg-desktop-portal -r"]
+[keybindings]
+"mod+return" = "exec kitty"
+"mod+v" = "spawn pavucontrol"
+"mod+shift+s" = "spawn grim -g \"$(slurp)\" - | wl-copy"
+# Управление музыкой (Абсолютный путь к сокету для driftwm)
+"mod+comma" = "exec mpc --host=/home/erak1dd/.config/mpd/socket prev"      # Win + , — прошлый трек
+"mod+period" = "exec mpc --host=/home/erak1dd/.config/mpd/socket next"     # Win + . — следующий трек
+"mod+p" = "exec mpc --host=/home/erak1dd/.config/mpd/socket toggle"         # Win + P — пауза / плей
+
+[input.keyboard]
+layout = "us,ru"
+options = "grp:alt_shift_toggle"
+[background]
+type = "wallpaper"
+path = "~/Pictures/01-wall3.jpg"
+
+

@@ -1,0 +1,67 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 0,
+    
+    // Оставляем центр пустым, модули только слева и справа
+    "modules-left": ["temperature", "cpu", "memory", "disk"],
+    "modules-center": [],
+    "modules-right": ["wireplumber", "clock", "tray", "custom/power"],
+
+    // Левый блок: Настройки датчиков
+    "temperature": {
+        "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/hwmon",
+        "input-filename": "temp1_input",
+        "critical-threshold": 80,
+        "format": "  {temperatureC}°C",
+        "format-critical": "   {temperatureC}°C",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "   {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  ⚙ {percentage}%",
+        "tooltip": false
+    },
+    "disk": {
+        "interval": 30,
+        "format": "  💾 {free}",
+        "path": "/",
+        "tooltip": false
+    },
+    // Правый блок: Язык и время
+    "hyprland/language": {
+        "format": "  {}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+    "clock": {
+        "format": "    {:%a, %d %b |  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+    // Настройка модуля звука (WirePlumber)
+    "wireplumber": {
+        "format": "  {volume}%",
+        "format-muted": "  MUTE",
+        "on-click": "pavucontrol", // По левому клику мышки откроется наш микшер!
+        "scroll-step": 5, // Можно крутить громкость колесиком мыши прямо на панели!
+        "tooltip": false,
+    },
+    "custom/power": {
+        "format": "   ",
+        "on-click": "systemctl poweroff",
+        "on-click-right": "systemctl reboot",
+        "tooltip": false
+    },
+}       
+

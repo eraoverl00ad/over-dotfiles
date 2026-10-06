@@ -1,0 +1,52 @@
+* {
+    font-family: "JetBrainsMono NFM", "JetBrainsMonoNerdFont", "JetBrains Mono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Делаем саму панель полностью невидимой */
+window#waybar {
+    background-color: transparent;
+}
+
+/* Оформляем левый блок как отдельную темную капсулу */
+.modules-left {
+    background-color: rgba(32, 32, 36, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2px 12px;
+    color: #dde1e6;
+}
+
+/* Подсветим надпись AMD красным/оранжевым цветом */
+#custom-amd-icon {
+    color: #ff9e64;
+    padding-right: 5px;
+}
+
+/* Оформляем правый блок как вторую капсулу */
+.modules-right {
+    background-color: rgba(32, 32, 36, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2px 12px;
+    color: #dde1e6;
+}
+
+/* Подсветка часов */
+#clock {
+    color: #dde1e6;
+}
+
+/* Подсветка раскладки клавиатуры */
+#language {
+    color: #dde1e6;
+}
+
+#tray {
+    padding-left: 10px;
+}
+#wireplumber {
+    color: #dde1e6; /* Приятный зеленый цвет для звука */
+    padding-right: 5px;
+}
