@@ -1,0 +1,39 @@
+# === СВЯЗЬ С СЕРВЕРОМ ===
+mpd_host = "~/.config/mpd/socket"
+#mpd_port = "6600"
+mpd_music_dir = "/home/erak1dd/Музыка"
+
+# === ВИЗУАЛИЗАЦИЯ И СУПЕР-ПЛЕЕР ===
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "Visualizer"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "●┃"
+
+# === МОНОХРОМНЫЙ ИНТЕРФЕЙС ===
+song_list_format = "{$3%n$9 · }{$7%a$9 - }{$5%t$9}|{$5%f$9}"
+song_status_format = "{(%l) }{{$7%a$9 - }{$5%t$9}}|{$5%f$9}"
+progressbar_look = "───"
+progressbar_color = "black"
+progressbar_elapsed_color = "white"
+
+# Цвета текста плеера (только белый, серый и черный графит)
+main_window_color = "white"
+header_window_color = "white"
+volume_color = "white"
+state_line_color = "black"
+state_flags_color = "white"
+statusbar_color = "white"
+alternative_ui_separator_color = "black"
+#active_column_color = "white"
+
+# Настройки юзабилити
+playlist_display_mode = "columns"
+browser_display_mode = "columns"
+search_engine_display_mode = "columns"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+user_interface = "alternative"
+locked_screen_width_part = "60"
+ask_before_clearing_playlists = "no"
+discard_colors_if_item_is_selected = "yes"
