@@ -39,6 +39,6 @@ fi
 echo "📤 Отправка репозитория на GitHub..."
 git add .
 git commit -m "Auto-update environment (waybar, fuzzel, kitty, driftwm): $(date '+%Y-%m-%d %H:%M:%S')"
-git push origin main
+git push origin master
 
 echo "✨ Всё готово! GitHub обновлен."
