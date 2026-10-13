@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Настройка путей (поправь, если твоя папка называется over-dotfiles)
+DOTFILES="$HOME/dotfiles"
+
+echo "🚀 Запуск полной синхронизации дотфайлов..."
+
+# Функция для безопасного копирования папок
+sync_config() {
+    local name=$1
+    local src="$HOME/.config/$name"
+    local dst="$DOTFILES/$name"
+    
+    if [ -d "$src" ]; then
+        echo "📦 Упаковка конфига: $name..."
+        rm -rf "$dst" && cp -r "$src" "$DOTFILES/"
+    else
+        echo "⚠️  Конфиг $name не найден в ~/.config/, пропускаем."
+    fi
+}
+
+# 1. Синхронизируем все ключевые приложения
+sync_config "waybar"
+sync_config "fuzzel"
+sync_config "kitty"
+sync_config "driftwm"
+
+# 2. Сохраняем права на запуск скриптов питания для Git
+cd "$DOTFILES"
+if [ -f "waybar/sys-exit.sh" ]; then
+    git update-index --chmod=+x waybar/sys-exit.sh 2>/dev/null
+fi
+
+if [ -f "waybar/sys-reb.sh" ]; then
+    git update-index --chmod=+x waybar/sys-reb.sh 2>/dev/null
+fi
+
+# 3. Автоматический деплой на GitHub
+echo "📤 Отправка репозитория на GitHub..."
+git add .
+git commit -m "Auto-update environment (waybar, fuzzel, kitty, driftwm): $(date '+%Y-%m-%d %H:%M:%S')"
+git push origin main
+
+echo "✨ Всё готово! GitHub обновлен."
