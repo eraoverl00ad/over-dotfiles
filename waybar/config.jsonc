@@ -59,8 +59,8 @@
     },
     "custom/power": {
         "format": "   ",
-        "on-click": "systemctl poweroff",
-        "on-click-right": "systemctl reboot",
+        "on-click": "~/.config/waybar/sys-exit.sh",
+        "on-click-right": "~/.config/waybar/sys-reb.sh",
         "tooltip": false
     },
 }       
