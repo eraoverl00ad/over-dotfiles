@@ -4,8 +4,8 @@ my first dotfiles
 
 * bar: waybar
 * launcher: fuzzel
-* terminal": kitty
-
+* terminal: kitty
+* notification daemon: mako
 * ncmpcpp/mpd
 
 <img src="screenshot.png" width="100%">

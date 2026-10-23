@@ -24,6 +24,7 @@ sync_config "waybar"
 sync_config "fuzzel"
 sync_config "kitty"
 sync_config "driftwm"
+sync_config "mako"
 
 # 2. Сохраняем права на запуск скриптов питания для Git
 cd "$DOTFILES"
@@ -38,7 +39,7 @@ fi
 # 3. Автоматический деплой на GitHub
 echo "📤 Отправка репозитория на GitHub..."
 git add .
-git commit -m "Auto-update environment (waybar, fuzzel, kitty, driftwm): $(date '+%Y-%m-%d %H:%M:%S')"
+git commit -m "Auto-update environment (waybar, fuzzel, kitty, driftwm, mako): $(date '+%Y-%m-%d %H:%M:%S')"
 git push origin master
 
 echo "✨ Всё готово! GitHub обновлен."

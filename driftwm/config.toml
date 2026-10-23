@@ -1,4 +1,4 @@
-autostart = ["xwayland-satellite", "waybar", "/usr/lib/xdg-desktop-portal -r"]
+autostart = ["xwayland-satellite", "waybar", "/usr/lib/xdg-desktop-portal -r", "mako"]
 [keybindings]
 "mod+return" = "exec kitty"
 "mod+v" = "spawn pavucontrol"
