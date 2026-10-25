@@ -15,4 +15,12 @@ options = "grp:alt_shift_toggle"
 type = "wallpaper"
 path = "~/.config/driftwm/backgrounds/01-wall3.jpg"
 
-
+[mouse.on-window]
+"mod+alt+left" = "move-window"
+"mod+alt+right" = "resize-window"
+"mod+alt+middle" = "fit-window-snapped"
+"mod+alt+shift+middle" = "fit-window"
+"alt+left" = "none"
+"alt+right" = "none"
+"alt+middle" = "none"
+"alt+shift+middle" = "none"
